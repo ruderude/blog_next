@@ -14,17 +14,23 @@ const SeachBlogs: NextPage = () => {
 
   // console.log(yearRadio)
   // console.log(categoryRadio)
-
-  const changeYear = (e: any) => {
-    const year = e.target.value
-    setYearRadio((e) => year)
-    console.log(year, categoryRadio)
-  }
   
   const changeCategory = (e: any) => {
     const category = e.target.value
     setCategoryRadio((e) => category)
-    console.log(yearRadio, category)
+    // console.log(yearRadio, category)
+    router.push({
+      pathname: `/blog/search/${yearRadio}/${category}`
+    })
+  }
+
+  const changeYear = (e: any) => {
+    const year = e.target.value
+    setYearRadio((e) => year)
+    // console.log(year, categoryRadio)
+    router.push({
+      pathname: `/blog/search/${year}/${categoryRadio}`
+    })
   }
 
   return (
@@ -36,6 +42,7 @@ const SeachBlogs: NextPage = () => {
       <Nav
         name={'categories'}
         color={'orange'}
+        val={categoryRadio}
         labels={categories}
         onChange={changeCategory}
       ></Nav>
@@ -43,6 +50,7 @@ const SeachBlogs: NextPage = () => {
       <Nav
         name={'year'}
         color={'yellow'}
+        val={yearRadio}
         labels={years}
         onChange={changeYear}
       ></Nav>
