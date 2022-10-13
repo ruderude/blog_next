@@ -19,6 +19,45 @@ a {
   box-sizing: border-box;
 }
 
+:target::before {
+  content: '';
+  display: block;
+  height: 72px;
+  margin-top: -72px;
+  visibility: hidden;
+}
+
+.text_pre {
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  width: 100%;
+}
+
+.paging_btn {
+  color: white;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height:40px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.choice_paging_btn {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height:40px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

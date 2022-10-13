@@ -5,7 +5,7 @@ interface Props {
   name: string
   color: string
   val: string
-  onChange: (e: any) => void
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   labels: Array<string>
 }
 
