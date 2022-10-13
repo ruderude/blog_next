@@ -1,4 +1,4 @@
-export const host = 'http://localhost:3000/';
+export const host = 'https://blog-next-barcode.vercel.app/';
 
 const Default = {
   title: 'ブログ・サイト',
